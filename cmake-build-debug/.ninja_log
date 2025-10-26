@@ -1,0 +1,11 @@
+# ninja log v6
+20	531	7832215906637891	CMakeFiles/Proiect_POO.dir/main.cpp.obj	562061d19656830f
+1174	1311	7832217130133081	Proiect_POO.exe	af80a45b75ab2d61
+24	1173	7832217118636019	CMakeFiles/Proiect_POO.dir/Calendar.cpp.obj	400c512ae372d8a1
+47	757	7832211611218204	CMakeFiles/Proiect_POO.dir/Activity.cpp.obj	3ca09235730397d7
+54	754	7832211611295827	CMakeFiles/Proiect_POO.dir/Transport.cpp.obj	13cabc46ce2b0207
+62	898	7832223300850442	CMakeFiles/Proiect_POO.dir/Transport.cpp.obj	9c72e3ac0ee72912
+56	908	7832223300783243	CMakeFiles/Proiect_POO.dir/Activity.cpp.obj	22fd72e6f0666068
+42	948	7832223300643994	CMakeFiles/Proiect_POO.dir/main.cpp.obj	50511e09cf8795ab
+49	1396	7832223300728697	CMakeFiles/Proiect_POO.dir/Calendar.cpp.obj	4446586adaa5053b
+1396	1563	7832223314186296	Proiect_POO.exe	af80a45b75ab2d61

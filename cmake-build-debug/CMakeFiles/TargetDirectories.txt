@@ -1,0 +1,3 @@
+C:/Users/Nedee/ProiectPOO.git/Milestone1-POO/cmake-build-debug/CMakeFiles/Proiect_POO.dir
+C:/Users/Nedee/ProiectPOO.git/Milestone1-POO/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Nedee/ProiectPOO.git/Milestone1-POO/cmake-build-debug/CMakeFiles/rebuild_cache.dir

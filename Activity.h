@@ -12,6 +12,7 @@ private:
     string Description;
     int start_hour;
     int end_hour;
+    int id;
 
 public:
     // Constructor
@@ -27,8 +28,15 @@ public:
     void setName(string Name);
 
     string getDescription();
+    void setDesc(string Description);
+
     int getStartHour() const;
+    void setStartHr(int start_hour);
+
     int getEndHour() const;
+    void setEndHr(int end_hour);
+
+    long getId() const;
 
     ~Activity();
 

@@ -15,14 +15,20 @@ private:
 public:
     Calendar();
 
-    bool addActivity(Activity activity);
-    bool addTransport(Transport transport);
+    bool addActivity(const Activity& activity);
+    bool addTransport(const Transport &transport);
     void checkSleep();
 
-    vector<Activity> getActivity();
-    vector<Transport> getTransports();
+    bool removeActivity(int id);
+    bool removeTransport(int id);
 
+    Activity getActivity(int id);
+    Transport getTransport(int id);
 
+    Calendar(const Calendar &calendar_cp);
+    Calendar& operator=(const Calendar &calendar_eq);
+
+    ~Calendar();
 };
 
 #endif //CALENDAR_H

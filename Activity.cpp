@@ -1,10 +1,11 @@
 
 #include "Activity.h"
-
+#include <cstdlib>
 #include <iostream>
 using namespace std;
 
 Activity::Activity(string Name, string Description, int start_hour, int end_hour) {
+    this->id = rand();
     this->Name = Name;
     this->Description = Description;
     this->start_hour = start_hour;
@@ -12,6 +13,7 @@ Activity::Activity(string Name, string Description, int start_hour, int end_hour
 }
 
 Activity::Activity(const Activity &activity_cp) {
+    this->id = activity_cp.id;
     this->Name = activity_cp.Name;
     this->Description = activity_cp.Description;
     this->start_hour = activity_cp.start_hour;
@@ -20,6 +22,7 @@ Activity::Activity(const Activity &activity_cp) {
 
 Activity& Activity::operator=(const Activity &activity_eq) {
     if (this != &activity_eq) {
+        this->id = activity_eq.id;
         this->Name = activity_eq.Name;
         this->Description = activity_eq.Description;
         this->start_hour = activity_eq.start_hour;
@@ -49,9 +52,26 @@ void Activity::setName(string Name) {
 string Activity::getDescription() {
     return this->Description;
 }
+
+void Activity::setDesc(string Description) {
+    this->Description = Description;
+}
+
 int Activity::getStartHour() const {
     return this->start_hour;
 }
+void Activity::setStartHr(int start_hour) {
+    this->start_hour = start_hour;
+}
+
 int Activity::getEndHour() const {
     return this->end_hour;
+}
+
+void Activity::setEndHr(int end_hour) {
+    this->end_hour = end_hour;
+}
+
+long Activity::getId() const {
+    return this->id;
 }

@@ -9,7 +9,20 @@
 Calendar::Calendar() {
 }
 
-bool Calendar::addActivity(Activity activity) {
+Calendar::Calendar(const Calendar& calendar_cp) {
+    this->activities = calendar_cp.activities;
+    this->transports = calendar_cp.transports;
+}
+
+Calendar& Calendar::operator=(const Calendar &calendar_eq) {
+    if (this != &calendar_eq) {
+        this->activities = calendar_eq.activities;
+        this->transports = calendar_eq.transports;
+    }
+    return *this;
+}
+
+bool Calendar::addActivity(const Activity& activity) {
     if (activity.getStartHour() >= activity.getEndHour() ||
         activity.getEndHour() > 7 * 24) {
         return false;
@@ -36,7 +49,17 @@ bool Calendar::addActivity(Activity activity) {
     return true;
 }
 
-bool Calendar::addTransport(Transport transport) {
+bool Calendar::removeActivity(int id) {
+    for (size_t i = 0; i < activities.size(); ++i) {
+        if (activities[i].getId() == id) {
+            activities.erase(activities.begin() + i);
+            return true;
+        }
+    }
+    return false;
+}
+
+bool Calendar::addTransport(const Transport &transport) {
     if (transport.getStartHour() >= transport.getEndHour() ||
         transport.getEndHour() > 7 * 24) {
         return false;
@@ -61,6 +84,16 @@ bool Calendar::addTransport(Transport transport) {
         return a.getStartHour() < b.getStartHour();
     });
     return true;
+}
+
+bool Calendar::removeTransport(int id) {
+    for (size_t i = 0; i < transports.size(); ++i) {
+        if (transports[i].getId() == id) {
+            transports.erase(transports.begin() + i);
+            return true;
+        }
+    }
+    return false;
 }
 
 void Calendar::checkSleep() {
